@@ -1,9 +1,15 @@
 package gosystem
 
 import (
-  "net/http"
-  "os"
-  "encoding/json"
-  )
+	"net/http"
+)
 
-  func
+func StartServer(addr string) error {
+	http.HandleFunc("/", rootHandler)
+	err := http.ListenAndServe(addr, nil)
+	return err
+}
+
+func rootHandler(w http.ResponseWriter, r *http.Request) {
+
+}
