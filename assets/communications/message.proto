@@ -1,0 +1,9 @@
+syntax="proto3";
+
+package gosystem;
+
+message result_command {
+	string command = 1;
+	string result_command = 2;
+	int32 return_code = 3;
+}
